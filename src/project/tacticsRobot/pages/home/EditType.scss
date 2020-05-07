@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020/3/16.
+ */
+.set-sell-type {
+  color: #2f2f2f;
+  font-size: rpx(28);
+  text-align: left;
+  min-height: 100vh;
+  background: #120e31;
+  padding: rpx(30);
+  .set-title {
+    line-height: rpx(50);
+    font-size: rpx(36);
+    padding-top: rpx(60);
+    padding-bottom: rpx(10);
+    font-weight: bolder;
+  }
+  input {
+    width: 100%;
+    line-height: rpx(60);
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    &.percent{
+      width: 83%;
+      color: $baseGreen;
+    }
+  }
+  .type-input {
+    line-height: rpx(60);
+    padding: rpx(10) 0;
+    .am-list-item{
+      padding-left: 0;
+      background: transparent;
+      min-height: rpx(60);
+      .am-list-extra{
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: auto;
+        text-align: center;
+        flex-basis: 100%;
+        border-bottom: 1px solid #ddd;
+        color: #2f2f2f;
+        font-size: rpx(28);
+      }
+    }
+  }
+  .select-icon {
+    background: url("../../assets/images/build/white_no_select.png.png") no-repeat right center;
+    background-size: rpx(36) auto;
+    &.selected {
+      background-image: url("../../assets/images/build/white_selected_icon.png");
+    }
+  }
+  .set-sell-content{
+    background: #E4F3FF;
+    border-radius: rpx(8);
+  }
+  .fixed-btn{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    padding: rpx(20) rpx(30);
+    background: #16143C;
+    color: #fff;
+    font-size: rpx(34);
+    z-index: 2;
+    .wa-col-100{
+      text-align: center;
+      height: rpx(88);
+      line-height: rpx(88);
+      border-radius: rpx(8);
+      background: #D82C5A;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020/3/12.
+ */
+.select_pop{
+  width: 100%;
+}
+.am-picker-popup-header{
+  .am-picker-popup-item{
+    color: #2F2F2F;
+    font-size: rpx(34);
+    font-weight: bold;
+    &.am-picker-popup-title{
+      color: #666;
+      font-size: rpx(28);
+      font-weight: normal;
+    }
+  }
+}
+.am-picker-col-content{
+  .am-picker-col-item-selected{
+    color: $baseRed;
+    font-size: rpx(36);
+  }
+}

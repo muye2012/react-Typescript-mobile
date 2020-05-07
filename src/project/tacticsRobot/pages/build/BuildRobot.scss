@@ -1,0 +1,25 @@
+@charset "utf-8";
+//@import "../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/10.
+ */
+.build-robot{
+  height: 100vh;
+  width: 100vw;
+  background-color: #16143c;
+  background-image: url("../../assets/images/build/select_product_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left top;
+  padding-top: rpx(201);
+  overflow: auto;
+  box-sizing: border-box;
+  padding-bottom: rpx(200);
+  &-title{
+    color: #fff;
+    font-size: rpx(28);
+    line-height: rpx(36);
+    padding: rpx(30) rpx(30) rpx(10);
+    text-align: left;
+  }
+}

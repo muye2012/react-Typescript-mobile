@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import "./var";
+//
+// Created by chenliang on 2020-3-9.
+//
+@mixin widthHeight ($width:null, $height:null) {
+  width: $width;
+  height: $height;
+}
+
+@mixin marPad ($margin:null, $padding:null) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin position ($position:null, $top:null, $left:null, $right:null, $bottom:null) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+//文字单行溢出显示省略号，必须写宽度
+@mixin ellipsis($width: 100%) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//文字多行溢出显示省略号，必须写宽度 兼容ie火狐
+@mixin moreEllipsis($width:100%, $line: 2, $height: 19px, $lineHeight: 10px) {
+  overflow: hidden;
+  text-overflow: ellipsis; //文本溢出显示省略号
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  width: $width;
+  height: $height;
+  line-height: $lineHeight;
+}
+
+//过渡动画ease
+@mixin ease() {
+  transition: all ease-in 0.2s;
+}
+
+//手动px转rem
+@function px2rem ($pxs, $base: 64px) {
+  $result: '';
+  @each $px in $pxs {
+    $rem: $px;
+    @if $result != '' {
+      $result: $result + ' ';
+    }
+    @if type_of($px) == number {
+      $rem: ($px / $base) * 1rem;
+    }
+    $result: $result + $rem;
+  }
+  @return unquote($result);
+}
+
+//以750为参考
+@function rpx ($pxs) {
+  //@return px2rem($pxs, 75)
+  @return #{$pxs/2}px;
+}
+
+@function img($img) {
+  @return 'src/assets/images/#{$img}';
+}
+
+// 对于浏览器的最小字体限制进行兼容
+@mixin small-font($font: 20) {
+  font-size: rpx(24);
+  -webkit-transform-origin-x: 0;
+  -webkit-transform: scale($font / 24);
+}
+
+// 向右箭头 $size 是指单边线条长度 $land 线条厚度
+@mixin right-arrow($size: 10, $top: 30%, $right: 0, $land: 2, $col: $borderColor) {
+  position: relative;
+  &:after {
+    content: '';
+    width: rpx($size);
+    height: rpx($size);
+    border-top: rpx($land) solid $col;
+    border-right: rpx($land) solid $col;
+    transform: rotate(45deg);
+    top: $top;
+    right: $right;
+    position: absolute;
+  }
+}
+
+// 向下箭头 $size 是指单边线条长度 $land 线条厚度
+@mixin bottom-arrow($size: 10, $top: 30%, $right: 0, $land: 2, $col: $borderColor) {
+  position: relative;
+  &:after {
+    content: '';
+    width: rpx($size);
+    height: rpx($size);
+    border-bottom: rpx($land) solid $col;
+    border-right: rpx($land) solid $col;
+    transform: rotate(45deg);
+    top: $top;
+    right: $right;
+    position: absolute;
+  }
+}
+
+// 向上箭头 $size 是指单边线条长度 $land 线条厚度
+@mixin up-arrow($size: 10, $top: 30%, $right: 0, $land: 2, $col: $borderColor) {
+  position: relative;
+  &:after {
+    content: '';
+    width: rpx($size);
+    height: rpx($size);
+    border-top: rpx($land) solid $col;
+    border-left: rpx($land) solid $col;
+    transform: rotate(45deg);
+    top: $top;
+    right: $right;
+    position: absolute;
+  }
+}
+
+// 解决边框1px 的问题
+@mixin border-one($color: $borderColor, $border: bottom) {
+  position: relative;
+  &:after {
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    content: "";
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    @if $border == bottom {
+      border-bottom: 1px solid $color;
+    } @else if $border == top {
+      border-top: 1px solid $color;
+    } @else if $border == left {
+      border-left: 1px solid $color;
+    } @else if $border == right {
+      border-right: 1px solid $color;
+    }
+  }
+}
+
+// 增加特殊字体样式并做兼容
+@mixin fontStyle($font: Roboto-Regular) {
+  font-family: $font, PingFangSC-Regular, "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+}
+
+// icon
+@mixin smallIcon($imgUrl, $wd) {
+  width: $wd;
+  height: $wd;
+  background: url($imgUrl) no-repeat center center;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: sub;
+}
+
+// 按钮
+@mixin btn($wd:rpx(690), $ht:rpx(88), $size: rpx(34), $bg: $baseRed) {
+  width: $wd;
+  height: $ht;
+  margin: 0 auto;
+  line-height: $ht;
+  font-size: $size;
+  text-align: center;
+  color: white;
+  background: $bg;
+  border-radius: rpx(8);
+}
+// 边框四个边都1px
+@mixin borderAllOne($color: #ebedf0, $radius: rpx(12)){
+  position: relative;
+  &:after{
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 1px solid $color;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    border-radius: $radius;
+  }
+}

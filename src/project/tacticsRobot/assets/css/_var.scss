@@ -1,0 +1,41 @@
+//
+// Created by chenliang on 2020-3-9.
+//
+$color:#eee;
+$defaultColor:#000;
+$defaultBgColor:#fff;
+$leftNavbarColor:#3f3f3f;
+$font-family-base:            'Microsoft YaHei',Arial,sans-serif,Tahoma !default;
+
+$bodyBGColor:                 #f6f6f6 !default;
+$baseBlue:                    #58A6FD !default;
+$baseRed:                     #D82C5A !default;
+$baseGreen:                   #44DB5E !default;
+$baseDarkenRed:               darken($baseRed, 6.25%) !default;
+$baseOrange:                  #F6A623 !default;
+$basePurple:                  #8E79ED !default;
+$baseGray:                    #C8C8C8 !default;
+$borderColor:                 #E4E4E4 !default;
+$btnColor:                    $baseRed !default;
+$btnDisabledColor:            rgba($baseRed, 0.6) !default;  //#e19493
+$btnActiveColor:              $baseDarkenRed !default;
+$btnNoTradeColor:             $baseGray !default;
+$textGrayColor:               #888 !default;
+$textPrimaryColor:            #2d2d2d !default;
+$upColor:                     $baseRed !default;
+$downColor:                   #1AAE52 !default;
+$successColor:                $baseBlue !default;
+$failColor:                   #4E4E4E !default;
+$ingColor:                    $baseOrange !default;
+$cancleColor:                 $baseRed !default;
+
+
+.green-col{
+    color: $baseGreen;
+}
+.blue-col{
+    color: $baseBlue;
+}
+.red-col{
+    color: $baseRed;
+}

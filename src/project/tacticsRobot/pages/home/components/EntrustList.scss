@@ -1,0 +1,91 @@
+@charset "utf-8";
+//@import "../../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/10.
+ */
+.entrust-list{
+  text-align: left;
+  padding-top: rpx(10);
+  .entrust-item{
+    background: #E4F3FF;
+    border-radius: rpx(8);
+    padding: 0 rpx(30) rpx(12);
+    margin-top: rpx(20);
+    &.bottom-arrow{
+      @include bottom-arrow(15, rpx(130), 4%, 4, #C1C1C1);
+    }
+    &.up-arrow{
+      @include up-arrow(15, rpx(130), 4%, 4, #C1C1C1);
+    }
+    &-top{
+      line-height: rpx(36);
+      padding: rpx(25) 0 rpx(33);
+    }
+    .entrust-name{
+      font-size: rpx(36);
+      color: #2f2f2f;
+    }
+    .entrust-code{
+      font-size: rpx(26);
+      color: #666;
+      padding: 0 rpx(16);
+    }
+    .entrust-state{
+      color: #4883F6;
+      padding: rpx(6) rpx(10);
+      background: rgba(72,131,246,0.10);
+    }
+    .entrust-btn{
+      color: #fff;
+      background: #4865E0;
+      font-size: rpx(20);
+      text-align: center;
+      padding: rpx(5) 0 rpx(10);
+      line-height: 1;
+      border-radius: rpx(30);
+      @include small-font();
+    }
+    &-content{
+      line-height: rpx(36);
+      font-size: rpx(26);
+      color: #2f2f2f;
+      p{
+        padding-bottom: rpx(18);
+      }
+    }
+    &-status{
+      line-height: rpx(34);
+      padding-top: rpx(8);
+    }
+  }
+  .blue-col{
+    color: #4883F6;
+  }
+  .entrust-action{
+    position: relative;
+    z-index: 1;
+    font-size: rpx(25);
+    color: #2F2F2F;
+    height: rpx(80);
+    padding: rpx(20) 0;
+    @include border-one($borderColor, top);
+    .wa-col-33{
+      border-right: rpx(1) solid #ddd;
+      &:last-of-type{
+        border-right: none;
+      }
+    }
+    .van-icon{
+      padding-right: rpx(10);
+    }
+    &:after{
+      height: rpx(4)
+    }
+    &.hidden{
+      display: none;
+    }
+  }
+  &-empty{
+    height: rpx(447);
+  }
+}

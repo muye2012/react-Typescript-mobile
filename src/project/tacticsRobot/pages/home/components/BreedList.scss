@@ -1,0 +1,37 @@
+@charset "utf-8";
+//@import "../../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/10.
+ */
+.breed-list{
+  border-radius: rpx(10);
+  background: #E4F3FF;
+  color: #2f2f2f;
+  box-shadow: 0 rpx(1) rpx(4) 0 #E4E4E4;
+  &-title{
+    line-height: rpx(80);
+    color: #999;
+    @include border-one();
+  }
+  .breed-code{
+    padding-left: rpx(30);
+  }
+  &-item{
+    height: rpx(140);
+    @include border-one();
+    padding-top: rpx(32);
+    padding-bottom: rpx(34);
+    line-height: rpx(40);
+    font-size: rpx(28);
+    span{
+      line-height: rpx(33);
+      color: #666;
+    }
+    &:last-child:after{
+      border: none;
+    }
+  }
+  &-empty{
+    height: rpx(180);
+  }
+}

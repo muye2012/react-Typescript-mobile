@@ -1,0 +1,66 @@
+@charset "utf-8";
+//@import "../../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/11.
+ */
+.product-list{
+  padding: 0 rpx(30);
+  color: #fff;
+  font-size: rpx(28);
+  &-title{
+    color: #8682D3;
+    padding-bottom: rpx(26);
+    margin: 0 rpx(30);
+    @include border-one();
+  }
+  .product-code{
+    padding-left: rpx(48);
+  }
+  .product-date{
+    padding-right: rpx(40);
+  }
+  .arrow-right{
+    @include right-arrow(10, 42%, rpx(-24));
+  }
+  .product-item{
+    color: #fff;
+    line-height: rpx(40);
+    padding-top: rpx(25);
+    @include border-one();
+    &:after{
+      border-image: linear-gradient(to left, rgba(105, 121, 244, 0) ,
+              rgba(105, 121, 244, 1) 50%,
+              rgba(105, 121, 244, 0)) 1;
+      border-top-width: 0;
+    }
+    &:nth-last-child(2):after{
+      border: none;
+    }
+    &-code{
+      text-align: left;
+      padding-left: rpx(78);
+      background: url("../../../assets/images/build/selected_icon.png") no-repeat rpx(20) rpx(20);
+      background-size: rpx(40) auto;
+      &.no-select{
+        background-image: url("../../../assets/images/build/no_select.png");
+      }
+    }
+    .price-val{
+      text-align: left;
+      padding: rpx(17) 0 rpx(24) rpx(79);
+      font-size: rpx(26);
+      color: #B0ABEF;
+    }
+    .price-num{
+      padding-right: rpx(12);
+    }
+    &>div{
+      z-index: 1;
+    }
+  }
+  .empty-breed{
+    height: rpx(159);
+    font-size: rpx(28);
+    color: #B0ABEF;
+  }
+}

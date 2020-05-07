@@ -1,0 +1,101 @@
+@charset "utf-8";
+//@import "../../assets/css/mixin";
+.home-page{
+  min-height: 100vh;
+  background: url("../../assets/images/home/home_bg.png") no-repeat, linear-gradient(to bottom, #2d2c4b 40%,#16143C 100%) no-repeat;
+  background-size: 100% auto, auto auto;
+  padding: 0 rpx(30);
+  color: #fff;
+  &-account{
+    height: rpx(60);
+    line-height: rpx(100);
+  }
+  &-title{
+    text-align: center;
+    font-size: rpx(36);
+    line-height: rpx(44);
+    padding-top: rpx(122);
+    background: url("../../assets/images/home/home_title.png") no-repeat center top;
+    background-size: rpx(450) auto;
+    &.DD-title{
+      background-image: url("../../assets/images/home/DD_title.png");
+    }
+  }
+  &-total{
+    padding-top: rpx(60);
+    padding-bottom: rpx(42);
+    color: #B0ABEF;
+    .total-title{
+      font-size: rpx(24);
+    }
+    .total-val{
+      font-size: rpx(36);
+      font-weight: bold;
+      line-height: rpx(42);
+      padding-top: rpx(12);
+    }
+  }
+  &-tab{
+    font-size: rpx(30);
+    color: #726FA8;
+    height: rpx(100);
+    @include border-one(#3A3679);
+    .wa-center{
+      z-index: 10;
+    }
+    .tab-item{
+      display: inline-block;
+      height: 100%;
+      line-height: rpx(94);
+      position: relative;
+      .msg-icon{
+        position: absolute;
+        right: rpx(-12);
+        top: rpx(25);
+        width: rpx(12);
+        height: rpx(12);
+        border-radius: 50%;
+        background: #D82C5A;
+      }
+      &.active-tab{
+        color: #fff;
+        &:after{
+          display: block;
+          content: ' ';
+          margin: 0 auto;
+          height: rpx(6);
+          width: rpx(40);
+          border-bottom: rpx(4) solid #fff;
+        }
+      }
+    }
+  }
+  .logo-img{
+    height: rpx(324);
+    background: url("../../assets/images/home/bottom_logo.png") no-repeat center rpx(60);
+    background-size: auto rpx(96);
+  }
+  .fixed-btn{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    padding: rpx(20) rpx(30);
+    background: #16143C;
+    color: #fff;
+    font-size: rpx(34);
+    z-index: 10;
+    .wa-col-100{
+      height: rpx(88);
+      line-height: rpx(88);
+      border-radius: rpx(8);
+      background: #D82C5A;
+      text-align: center;
+    }
+    .am-icon{
+      font-size: rpx(24);
+      transform: rotate(45deg);
+      vertical-align: sub;
+      margin-right: rpx(10);
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@charset "utf-8";
+//@import "../../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/10.
+ */
+.ballot-list{
+  border-radius: rpx(10);
+  background: #E4F3FF;
+  color: #2f2f2f;
+  box-shadow: 0 rpx(1) rpx(4) 0 #E4E4E4;
+  &-title{
+    line-height: rpx(80);
+    color: #999;
+    @include border-one();
+  }
+  .breed-code{
+    padding-left: rpx(30);
+  }
+  .sell-tactics{
+    padding-right: rpx(61);
+  }
+  &-item{
+    @include border-one();
+    padding-top: rpx(32);
+    line-height: rpx(40);
+    font-size: rpx(28);
+    position: relative;
+    span{
+      line-height: rpx(33);
+      color: #666;
+    }
+    &:last-child:after{
+      border: none;
+    }
+    .sell-price{
+      padding-right: rpx(61);
+      padding-left: rpx(26);
+      position: relative;
+      &:after{
+        position: absolute;
+        top: 26%;
+        right: 9%;
+        content: ' ';
+        width: rpx(20);
+        height: rpx(20);
+        border-bottom: rpx(2) solid #c1c1c1;
+        border-right: rpx(2) solid #c1c1c1;
+        transform: rotate(45deg);
+        transform-origin: center rpx(16);
+        transition: all 0.2s;
+      }
+      &.open-icon{
+        &:after{
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    &>[class*="wa-col"]{
+      padding-bottom: rpx(34);
+    }
+    .tag_stop{
+      position: absolute;
+      width: rpx(116);
+      line-height: rpx(36);
+      text-align: center;
+      top: 0;
+      right: 0;
+      font-size: rpx(24);
+      color: $baseRed;
+      background: rgba(216, 44, 90, 0.1);
+      border-radius: 0 0 0 rpx(10);
+    }
+  }
+  .ballot-action{
+    position: relative;
+    z-index: 10;
+    font-size: rpx(25);
+    color: #2F2F2F;
+    height: rpx(80);
+    padding: rpx(20) 0;
+    &.hidden{
+      display: none;
+    }
+    @include border-one($borderColor, top);
+    .wa-col-25{
+      border-right: rpx(1) solid #ddd;
+    }
+    .van-icon{
+      padding-right: rpx(10);
+    }
+    &:after{
+      height: rpx(4);
+    }
+    .wa-icon{
+      margin-right: rpx(6);
+    }
+  }
+  &-empty{
+    height: rpx(180);
+  }
+}

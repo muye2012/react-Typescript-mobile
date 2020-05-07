@@ -1,0 +1,48 @@
+@charset "utf-8";
+//@import "../../../assets/css/mixin";
+/*
+ * Created by chenLiang on 2020/3/10.
+ */
+.subscribe-page{
+  text-align: left;
+  padding-top: rpx(10);
+  &-empty{
+    height: rpx(447);
+  }
+  .subscribe-item{
+    background: #E4F3FF;
+    border-radius: rpx(8);
+    padding: rpx(30);
+    margin-top: rpx(20);
+    .subscribe-btn{
+      color: #fff;
+      background: #D82C5A;
+      font-size: rpx(20);
+      line-height: rpx(44);
+      text-align: center;
+      height: rpx(43);
+      border-radius: rpx(30);
+      @include small-font();
+    }
+    &-content{
+      line-height: rpx(36);
+      font-size: rpx(26);
+      color: #2f2f2f;
+      p{
+        padding-bottom: rpx(18);
+      }
+      .subscribe-item-status{
+        line-height: rpx(34);
+        padding-top: rpx(8);
+        font-size: rpx(24);
+        padding-bottom: 0;
+      }
+    }
+    .bank-transfer{
+      float: right;
+      color: $baseBlue;
+      padding-right: rpx(25);
+      @include right-arrow(13, 32%, 5%, 2, #58A6FD);
+    }
+  }
+}

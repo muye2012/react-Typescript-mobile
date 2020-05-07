@@ -1,0 +1,73 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020/3/11.
+ */
+.select_time{
+  padding: 0 rpx(30);
+  position: relative;
+  .fixed_robot{
+    position: absolute;
+    top: rpx(-148);
+    left: rpx(72);
+    height: rpx(223);
+    padding-left: rpx(181);
+    //background: url("../../../assets/images/build/robot_img.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: rpx(182);
+    z-index: 10;
+    &_txt{
+      color: #ffffff;
+      font-size: rpx(29);
+      text-align: left;
+      height: 100%;
+      padding-left: rpx(18);
+      padding-top: rpx(57);
+      width: rpx(420);
+      background: url("../../../assets/images/build/say_box.png") no-repeat 0 rpx(32);
+      background-size: rpx(381);
+    }
+  }
+  &_content{
+    .time_txt{
+      font-size: rpx(28);
+      color: #B0ABEF;
+      padding: rpx(30) 0;
+    }
+    .time_val{
+      font-size: rpx(36);
+      color: #fff;
+      text-shadow: 0 rpx(2) rpx(15) rgba(255,209,209,0.62);
+      padding-bottom: rpx(22);
+    }
+  }
+  .am-list-item{
+    background: transparent;
+    &.am-list-item-active{
+      background: transparent;
+    }
+    .am-list-line{
+      .am-list-extra{
+        width: 100%;
+        text-align: center;
+        flex-basis: 100%;
+        font-size: rpx(36);
+        color: #fff;
+        text-shadow: 0 rpx(2) rpx(15) rgba(255,209,209,0.62);
+        padding-bottom: rpx(22);
+        padding-top: 0;
+      }
+      .am-list-arrow{
+        width: rpx(25);
+        height: rpx(25);
+        background-position: 50% 10%;
+      }
+    }
+    .am-picker-col-item{
+      font-size: rpx(32);
+      &-selected{
+        font-size: rpx(34);
+        color: #CE3533;
+      }
+    }
+  }
+}

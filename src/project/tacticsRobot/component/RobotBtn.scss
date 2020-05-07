@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020/3/26.
+ */
+.robot_btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: rpx(24) 0 rpx(26);
+  background: #15133B;
+  box-shadow: inset 1px 1px rpx(25) 0 #2D2F68;
+  border-top: 1px solid;
+  border-image: linear-gradient(to left, rgba(144, 144, 144, 0) ,
+          rgba(144, 144, 144, 1) 50%,
+          rgba(144, 144, 144, 0)) 1;
+  &_img{
+    width: rpx(690);
+    height: rpx(90);
+    margin: 0 auto;
+    margin-bottom: env(safe-area-inset-bottom);
+    background: url("../assets/images/common/select_btn.png") no-repeat;
+    background-size: 100%;
+    &.select_disabled_btn{
+      background-image: url("../assets/images/common/select_disabled_btn.png");
+    }
+    &.select_btn{
+      background-image: url("../assets/images/common/select_btn.png");
+    }
+    &.confirm_btn{
+      background-image: url("../assets/images/common/confirm_btn_fixed.png");
+    }
+    &.look_btn{
+      background-image: url("../assets/images/common/look_btn.png");
+    }
+    &.next_btn{
+      background-image: url("../assets/images/common/next_btn.png");
+    }
+    &.next_disabled_btn{
+      background-image: url("../assets/images/common/next_disabled_btn.png");
+    }
+    &.submit_btn{
+      background-image: url("../assets/images/common/submit_btn.png");
+    }
+    &.confirm_submit{
+      background-image: url("../assets/images/common/confirm_submit.png");
+    }
+  }
+  &_content{
+    background: rgb(216,44,90);
+    border-radius: rpx(10);
+    width: rpx(690);
+    height: rpx(90);
+    margin: 0 auto;
+    line-height: rpx(90);
+    font-size: rpx(36);
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  &.robot_btn_disabled{
+    div{
+      opacity: 0.5;
+    }
+  }
+}

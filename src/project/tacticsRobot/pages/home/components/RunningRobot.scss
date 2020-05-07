@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020-3-9.
+ */
+.running-robot{
+  font-size: rpx(28);
+  color: #E4F3FF;
+  padding-bottom: rpx(4);
+  &-title{
+    div{
+      padding-top: rpx(30);
+      padding-bottom: rpx(20);
+    }
+  }
+  .time-date{
+    padding-right: rpx(40);
+    background-repeat: no-repeat;
+    background-position: right rpx(28);
+    //background: url() no-repeat rpx(300) rpx(28);
+    background-size: rpx(32) auto;
+    margin-right: rpx(8);
+  }
+  .empty-breed{
+    height: rpx(447);
+  }
+}

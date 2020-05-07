@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*
+ * Created by chenLiang on 2020/3/11.
+ */
+.robot_box{
+  position: relative;
+  background-color: rgba(8,14,46,0.10);
+  background-image:url("../assets/images/common/blue_bg_middle.png");
+  background-size:100%;
+  margin: rpx(30) auto rpx(31);
+  width: 100%;
+  &.box_error{
+    background-image: url("../assets/images/common/red_bg_middle.png");
+    .robot_box_top{
+      background-image: url("../assets/images/common/red_bg_top.png");
+    }
+    .robot_box_bottom{
+      background-image: url("../assets/images/common/red_bg_bottom.png");
+    }
+    .robot_box_down{
+      background-image: url("../assets/images/common/red_bg_down.png");
+    }
+  }
+  &.type_2{
+    margin: rpx(30) auto rpx(46);
+  }
+  .robot_box_bottom{
+    position: absolute;
+    bottom: rpx(-31);
+    left: 0;
+    width: 100%;
+    height: rpx(31);
+    //background: url("../assets/images/common/blue_bg_bottom.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &_top{
+    position: absolute;
+    top: rpx(-29);
+    left: 0;
+    width: 100%;
+    height: rpx(30);
+    background: url("../assets/images/common/blue_bg_top.png") no-repeat;
+    background-size: 100%;
+  }
+  &_down{
+    position: absolute;
+    bottom: rpx(-50);
+    left: 0;
+    width: 100%;
+    height: rpx(50);
+    background: url("../assets/images/common/blue_bg_down.png") no-repeat;
+    background-size: 100%;
+  }
+  &.blue_style{
+    background: #E4F3FF;
+    margin: 0;
+    border: 1px solid #E4F3FF;
+    padding: rpx(30) 0;
+    border-radius: rpx(10);
+    .robot_box_top, .robot_box_bottom, .robot_box_down{
+      display: none;
+    }
+    &.box_error{
+      border: 1px solid #D82C5A;
+      box-shadow: inset 0 0 rpx(30) rpx(3) #D82C5A;
+    }
+  }
+  .aside_bg{
+    background: url("../assets/images/common/robot_bg_aside.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: rpx(36);
+    width: rpx(14);
+    height: rpx(27);
+    display: block;
+    &.aside_left{
+      left: rpx(-8);
+    }
+    &.aside_right{
+      right: rpx(-8);
+    }
+  }
+}
