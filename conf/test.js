@@ -58,9 +58,9 @@ function scpUp() {
     }
   });
   client.scp('./build/index.html', {
-    host: conf.host || '10.0.29.181',
-    username: 'root',
-    password: '888888',
+    host: conf.host,
+    username: '****',
+    password: '****',
     path: conf.sourcePath
   }, (err) => {
     if (err) {
