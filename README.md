@@ -1,44 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##说明
+```
+本工程下可配置多个不同项目（配置在projectConfig.js文件中），
+旨在同工程下多个项目可共用相同的配置，
+公共的组件以及公共的方法,
+打包或运行不同项目时可加项目名加以区分
+同时使用scp2进行文件上传操作，
+实现了一行命令完成打包上传项目的目的，节省了开发测试时间
+```
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 本地运行项目(local)
+```
+npm run d 项目名    如 npm run d tac
+```
+（项目名指在conf/projectConfig内配置的项目简称）
+## 打包项目至dev环境(development)
+```
+npm run t 项目名
+```
+## 打包项目(production)
+####只打包，打包后可直接作为生产仿真包
+```
+npm run b 项目名
+```
